@@ -11,6 +11,7 @@ dotenv.config({
 import authRoutes from './interfaces/routes/auth.routes.js';
 import userRoutes from './interfaces/routes/user.routes.js';
 import interviewRoutes from './interfaces/routes/interview.routes.js';  
+import sessionRoutes from './interfaces/routes/session.routes.js';
 
 
 
@@ -24,6 +25,7 @@ app.use(cookieParser());
 // Routes
 app.use('/api/auth', authRoutes);
 app.use('/api/users', userRoutes);
+app.use('/api/sessions', sessionRoutes);
 app.use(
   "/uploads",
   express.static("uploads")

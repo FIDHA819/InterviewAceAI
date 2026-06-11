@@ -60,7 +60,7 @@ export async function generateInterviewQuestions(
   count: number
 ): Promise<GeneratedQuestion[]> {
     
-   console.log("GROQ KEY:", process.env.GROQ_API_KEY);
+  
 
   const groq = new Groq({
     apiKey: process.env.GROQ_API_KEY,
@@ -114,7 +114,7 @@ try {
     throw new Error("No response from Groq");
   }
 
-  console.log("Groq Response:", text);
+
 
   const cleaned = text
     .replace(/```json\n?/g, "")
