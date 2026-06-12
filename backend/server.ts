@@ -1,17 +1,23 @@
 import dotenv from 'dotenv';
+import path from 'path';
+
+dotenv.config({
+  path: path.resolve(process.cwd(), '.env'),
+});
+console.log("ENV FILE:", path.resolve(process.cwd(), ".env"));
+console.log("GROQ_API_KEY:", process.env.GROQ_API_KEY);
 import express from 'express';
 import mongoose from 'mongoose';
 import cors from 'cors';
 import cookieParser from 'cookie-parser';
 
-import path from "path";
-dotenv.config({
-   path: path.resolve(process.cwd(), '.env'),
-});
+
+
 import authRoutes from './interfaces/routes/auth.routes.js';
 import userRoutes from './interfaces/routes/user.routes.js';
 import interviewRoutes from './interfaces/routes/interview.routes.js';  
 import sessionRoutes from './interfaces/routes/session.routes.js';
+import feedbackRoutes from './interfaces/routes/feedback.routes.js';
 
 
 
@@ -31,7 +37,7 @@ app.use(
   express.static("uploads")
 );
 app.use('/api/interviews', interviewRoutes);                
-
+app.use('/api/feedback', feedbackRoutes);
 // Health check
 app.get('/health', (_req, res) => res.json({ status: 'ok' }));
 

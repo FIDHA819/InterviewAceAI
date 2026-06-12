@@ -7,7 +7,8 @@ import Dashboard from './Pages/Dashboard';
 import CategoriesPage from './Pages/CategoriesPage';
 import CreateInterviewPage from './Pages/CreateInterviewPage';       
 import SessionPage from './Pages/SessionPage'; 
-import SessionListPage from './Pages/SessionListPage';                      
+import SessionListPage from './Pages/SessionListPage';         
+import FeedbackPage from './Pages/FeedbackPage';             
 
 export default function App() {
   return (
@@ -21,6 +22,7 @@ export default function App() {
             <Route path="/interview"        element={<CategoriesPage />}  />
             <Route path="/interview/create" element={<CreateInterviewPage />} />
             <Route path="/sessions"      element={<SessionListPage />} />
+            <Route path="/feedback/:sessionId" element={<FeedbackPage />} />
             <Route path="/analytics"        element={<div className="p-6 text-slate-500">Analytics — Day 8</div>}    />
             <Route path="/resume"           element={<div className="p-6 text-slate-500">Resume — Day 9</div>}       />
             <Route path="/profile"          element={<ProfilePage />}     />
