@@ -18,6 +18,8 @@ import userRoutes from './interfaces/routes/user.routes.js';
 import interviewRoutes from './interfaces/routes/interview.routes.js';  
 import sessionRoutes from './interfaces/routes/session.routes.js';
 import feedbackRoutes from './interfaces/routes/feedback.routes.js';
+import analyticsRoutes from './interfaces/routes/analytics.routes.js';
+import resumeRoutes from './interfaces/routes/resume.routes.js';
 
 
 
@@ -38,6 +40,8 @@ app.use(
 );
 app.use('/api/interviews', interviewRoutes);                
 app.use('/api/feedback', feedbackRoutes);
+app.use('/api/analytics', analyticsRoutes);
+app.use('/api/resume', resumeRoutes);
 // Health check
 app.get('/health', (_req, res) => res.json({ status: 'ok' }));
 
