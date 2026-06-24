@@ -13,10 +13,13 @@ export const authService = {
 
   getMe: () =>
     api.get('/auth/me'),
-
-  updateProfile: (data: { name?: string; avatar?: string }) =>
-    api.put('/users/profile', data),
-
+  
+updateProfile: (data: FormData) =>
+  api.put('/users/profile', data, {
+    headers: {
+      'Content-Type': 'multipart/form-data',
+    },
+  }),
   changePassword: (data: { currentPassword: string; newPassword: string }) =>
     api.put('/users/change-password', data),
 };

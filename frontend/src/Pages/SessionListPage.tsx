@@ -3,9 +3,10 @@ import { useNavigate }          from 'react-router-dom';
 import { sessionService }       from '../services/session.service';
 
 interface PopulatedInterview {
-  title:         string;
-  category:      string;
-  difficulty:    string;
+  _id: string;
+  title: string;
+  category: string;
+  difficulty: string;
   questionCount: number;
 }
 

@@ -7,7 +7,9 @@ import {
 } from 'recharts';
 import { analyticsService }     from "../services/analytic.service";
 import type {
-  AnalyticsData, HistoryRow, TrendPoint, CategoryStat,
+  AnalyticsData,
+  HistoryRow,
+  CategoryStat,
 } from '../types/analytic.types';
 
 // ─── Helpers ──────────────────────────────────────────────────────────────────
@@ -360,9 +362,8 @@ export default function AnalyticsPage() {
                 strokeWidth={2}
               />
               <Tooltip
-                formatter={(v: number) => [`${v}%`, 'Score']}
-                contentStyle={{ fontSize: 12, borderRadius: 8 }}
-              />
+  formatter={(v) => [`${Number(v ?? 0)}%`, 'Score']}
+/>
             </RadarChart>
           </ResponsiveContainer>
         </div>
