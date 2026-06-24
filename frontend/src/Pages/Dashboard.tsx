@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { useAuthStore } from '../store/authStore';
+import { useAuthStore } from '../store/authstore';
 import api from '../services/api';
 import type { UserStats, RecentSession } from '../types/dashboard.types';
 
@@ -148,6 +148,7 @@ export default function Dashboard() {
               { label: 'Backend Interview',   emoji: '🛠️',  cat: 'backend'       },
               { label: 'System Design',       emoji: '🏗️',  cat: 'system-design' },
               { label: 'HR Interview',        emoji: '🤝',  cat: 'hr'            },
+              
             ].map(({ label, emoji, cat }) => (
               <button
                 key={cat}

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { NavLink, Outlet, useNavigate } from 'react-router-dom';
-import { useAuthStore } from '../../store/authStore';
+import { useAuthStore } from '../../store/authstore';
 import { useAuth } from '../../hooks/useAuth';
 
 const navItems = [
@@ -10,6 +10,7 @@ const navItems = [
   { to: '/analytics',  icon: '📊', label: 'Analytics'      },
   { to: '/resume',      icon: '📄', label: 'Resume'         },
   { to: '/profile',     icon: '👤', label: 'Profile'        },
+  { to: '/jobs', icon: '💼', label: 'Job Match' },
 ];
 
 export default function DashboardLayout() {

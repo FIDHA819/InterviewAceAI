@@ -20,6 +20,7 @@ import sessionRoutes from './interfaces/routes/session.routes.js';
 import feedbackRoutes from './interfaces/routes/feedback.routes.js';
 import analyticsRoutes from './interfaces/routes/analytics.routes.js';
 import resumeRoutes from './interfaces/routes/resume.routes.js';
+import jobMatchRoutes from "./interfaces/routes/jobmatch.routes.js"
 
 
 
@@ -42,8 +43,8 @@ app.use('/api/interviews', interviewRoutes);
 app.use('/api/feedback', feedbackRoutes);
 app.use('/api/analytics', analyticsRoutes);
 app.use('/api/resume', resumeRoutes);
-// Health check
-app.get('/health', (_req, res) => res.json({ status: 'ok' }));
+app.use('/api/jobmatch', jobMatchRoutes);
+
 
 // Connect DB then start server
 const PORT = process.env.PORT || 5000;

@@ -11,6 +11,7 @@ import SessionListPage from './Pages/SessionListPage';
 import FeedbackPage from './Pages/FeedbackPage';  
 import AnalyticsPage from './Pages/AnalyticPage';       
 import ResumePage from './Pages/ResumePage';    
+import JobMatchPage from './Pages/jobMatchPage';
 
 export default function App() {
   return (
@@ -28,7 +29,7 @@ export default function App() {
             <Route path="/analytics"        element={<AnalyticsPage />}    />
             <Route path="/resume"           element={<ResumePage />}       />
             <Route path="/profile"          element={<ProfilePage />}     />
-       
+       <Route path="/jobs" element={<JobMatchPage />} />
           </Route>
         </Route>
         <Route path="*" element={<Navigate to="/login" replace />} />
