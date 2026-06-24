@@ -1,6 +1,8 @@
-import { useState, useEffect, useRef, DragEvent } from 'react';
+import React from 'react';
+import {useState,useEffect,useRef} from 'react';
+import type { DragEvent } from 'react';
 import { resumeService } from '../services/resume.service';
-import type { Resume, ResumeAnalysis } from '../types/resume.types';
+import type { Resume} from '../types/resume.types';
 
 // ─── Helpers ──────────────────────────────────────────────────────────────────
 

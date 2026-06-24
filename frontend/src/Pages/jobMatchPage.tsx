@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { jobMatchService }      from '../services/jobMatch.service';
-import type { JobMatch, Audit, Rewrite } from '../types/jobMatch.types';
+import type { JobMatch} from '../types/jobMatch.types';
 
 // ─── Helpers ──────────────────────────────────────────────────────────────────
 

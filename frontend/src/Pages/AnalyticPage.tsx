@@ -503,7 +503,9 @@ export default function AnalyticsPage() {
                       </td>
                       <td className="px-4 py-3 text-slate-600">{row.technical}%</td>
                       <td className="px-4 py-3 text-slate-600">{row.communication}%</td>
-                      <td className="px-4 py-3 text-slate-500">{fmtTime(row.totalTime)}</td>
+                   <td className="px-4 py-3 text-slate-500">
+  {fmtTime(row.totalTime ?? 0)}
+</td>
                       <td className="px-4 py-3 text-slate-400 whitespace-nowrap">
                         {new Date(row.createdAt).toLocaleDateString('en-GB', {
                           day: '2-digit', month: 'short', year: 'numeric',
